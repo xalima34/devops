@@ -24,7 +24,7 @@ jobs:
                 terraform_wrapper: false
             - name: Terraform init
               run: terraform init -backend-config="bucket=$TF_STATE_BUCKET_NAME" -backend-config="ap-northeast-1"
-              working-directory: ./terraform
+              working-directory: ./devops/terraform
             - name: Terraform Plan
               id: plan
               run: |-
@@ -34,9 +34,9 @@ jobs:
                 -var="private_key=$PRIVATE_SSH_KEY" \
                 -var="key_name=deployer-key" \
                 -out=PLAN
-              working-directory: ./terraform
+              working-directory: ./devops/terraform
             - name: Terraform Apply
               id: apply
               run: terraform apply PLAN
-              working-directory: ./terraform
+              working-directory: ./devops/terraform
 

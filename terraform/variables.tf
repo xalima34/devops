@@ -1,4 +1,4 @@
-variable " region" {
+variable "region" {
   default = "ap-northeast-1"
 }
 variable "public_key" {
