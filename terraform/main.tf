@@ -11,7 +11,7 @@ terraform {
 }
 
 provider "aws" {
-    region = var.region
+    region = var. region
 
 }
 resource "aws_instance" "server" {
@@ -72,6 +72,8 @@ resource "aws_security_group" "maingroup" {
             security_groups = []
             self = false
             to_port = 80 
+        }
+    ]
 }
 
 resource "aws_key_pair" "deployer" {
