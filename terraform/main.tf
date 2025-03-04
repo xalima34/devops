@@ -6,7 +6,8 @@ terraform {
       }
     }
     backend "S3"{
-        key = "aws/ec2-deploy/terraform.tfstate"
+        key = "terraform.tfstate"
+        bucket = "ec2-ecr-khadim-app-terraform-state-bucket"
     }
 }
 
