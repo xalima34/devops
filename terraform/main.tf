@@ -8,6 +8,10 @@ terraform {
     backend "s3"{
         key = "terraform.tfstate"
         bucket = "ec2-ecr-khadim-app-terraform-state-bucket"
+        access_key = "AKIA6G75DU5YUE5XRT5K"
+        Secret_key = "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"
+        
+
     }
 }
 
