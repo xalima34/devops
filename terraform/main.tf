@@ -5,7 +5,7 @@ terraform {
         version = "~> 1.0.0"
       }
     }
-    backend "S3"{
+    backend "s3"{
         key = "terraform.tfstate"
         bucket = "ec2-ecr-khadim-app-terraform-state-bucket"
     }
