@@ -22,8 +22,9 @@ jobs:
               uses: hashicorp/setup-terraform@v1
               with:
                 terraform_wrapper: false
-            - name: Terraform init
-              run: terraform init 
+            - name: Terraform Init
+              id: init
+              run: terraform init -backend-config="bucket=$TF_STATE_BUCKET_NAME" -backend-config="region=ap-northeast-1" 
               working-directory: ./terraform
             - name: Terraform Plan
               id: plan
