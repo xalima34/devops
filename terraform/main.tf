@@ -2,12 +2,11 @@ terraform {
     required_providers {
       aws = {
         source = "hashicorp/aws"
-        version = "~> 1.0.0"
+        version = "~> 5.89.0"
       }
     }
     backend "s3"{
-        key = "terraform.tfstate"
-        bucket = "ec2-ecr-khadim-app-terraform-state-bucket"
+        key = "aws/ec2-deploy/terraform.tfstate"
     }
 }
 
