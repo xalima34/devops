@@ -33,7 +33,7 @@ jobs:
                 -var="region=ap-northeast-1" \
                 -var="public_key=$PUBLIC_SSH_KEY" \
                 -var="private_key=$PRIVATE_SSH_KEY" \
-                -var="key_name=deployer-key" \
+                -var="key_name=deployer1-key" \
                 -out=PLAN
               working-directory: ./terraform
             - name: Terraform Apply
